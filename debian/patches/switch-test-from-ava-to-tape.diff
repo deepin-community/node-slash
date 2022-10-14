@@ -1,0 +1,30 @@
+Description: switch test from ava to tape
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-01-13
+
+--- a/test.js
++++ b/test.js
+@@ -1,17 +1,20 @@
+-import test from 'ava';
+-import slash from '.';
++const test = require('tape');
++const slash = require('.');
+ 
+ test('convert backwards-slash paths to forward slash paths', t => {
+ 	t.is(slash('c:/aaaa\\bbbb'), 'c:/aaaa/bbbb');
+ 	t.is(slash('c:\\aaaa\\bbbb'), 'c:/aaaa/bbbb');
++	t.end();
+ });
+ 
+ test('not convert extended-length paths', t => {
+ 	const path = '\\\\?\\c:\\aaaa\\bbbb';
+ 	t.is(slash(path), path);
++	t.end();
+ });
+ 
+ test('not convert paths with Unicode', t => {
+ 	const path = 'c:\\aaaa\\bbbb\\★';
+ 	t.is(slash(path), path);
++	t.end();
+ });
