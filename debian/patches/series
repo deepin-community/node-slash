@@ -1,1 +1,2 @@
 switch-test-from-ava-to-tape.diff
+export-commonjs.patch

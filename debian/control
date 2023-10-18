@@ -5,10 +5,12 @@ Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.deb
 Uploaders: Pirate Praveen <praveen@debian.org>
 Testsuite: autopkgtest-pkg-nodejs
 Build-Depends:
- debhelper-compat (= 12)
+ debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-rollup-plugin-node-resolve
  , node-tape <!nocheck>
- , pkg-js-tools (>= 0.9.20~)
-Standards-Version: 4.4.1
+ , rollup
+Standards-Version: 4.6.0
 Homepage: https://github.com/sindresorhus/slash
 Vcs-Git: https://salsa.debian.org/js-team/node-slash.git
 Vcs-Browser: https://salsa.debian.org/js-team/node-slash
@@ -16,9 +18,8 @@ Rules-Requires-Root: no
 
 Package: node-slash
 Architecture: all
-Depends:
- ${misc:Depends}
- , nodejs
+Depends: ${misc:Depends}
+Multi-Arch: foreign
 Description: Node.js library to convert Windows backslash paths to slash paths
  node-slash provides a simple way to convert Windows backslash paths to slash
  paths: 'foo\bar' becomes 'foo/bar'
