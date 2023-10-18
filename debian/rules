@@ -5,4 +5,8 @@
 #export DH_VERBOSE=1
 
 %:
-	dh $@ --with nodejs
+	dh $@
+
+override_dh_auto_build:
+	mv index.js index.mjs
+	cp debian/index.cjs index.js

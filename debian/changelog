@@ -1,3 +1,47 @@
+node-slash (4.0.0-3) unstable; urgency=medium
+
+  * Team upload
+  * Fix commonjs export for jest (remove type:module)
+
+ -- Yadd <yadd@debian.org>  Sun, 10 Apr 2022 19:31:32 +0200
+
+node-slash (4.0.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Better commonjs export
+
+ -- Yadd <yadd@debian.org>  Fri, 08 Apr 2022 16:52:49 +0200
+
+node-slash (4.0.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 4.0.0
+  * Refresh patch
+  * Build commonjs files
+
+ -- Yadd <yadd@debian.org>  Fri, 08 Apr 2022 08:28:15 +0200
+
+node-slash (3.0.0-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit.
+  * Update standards version to 4.5.0, no changes needed.
+  * Apply multi-arch hints.
+    + node-slash: Add Multi-Arch: foreign.
+
+  [ Yadd ]
+  * Bump debhelper compatibility level to 13
+  * Modernize debian/watch
+    * Fix GitHub tags regex
+    * Fix filenamemangle
+  * Use dh-sequence-nodejs
+  * Update standards version to 4.6.0, no changes needed.
+  * Drop dependency to nodejs
+
+ -- Yadd <yadd@debian.org>  Fri, 26 Nov 2021 06:11:43 +0100
+
 node-slash (3.0.0-1) unstable; urgency=medium
 
   * Team upload
